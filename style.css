@@ -1,0 +1,91 @@
+body {
+  transition: background 2s ease;
+  min-height: 100vh;
+}
+
+#weather-result,
+#forecast-result {
+  background: rgba(255 255 255 / 0.85);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+}
+
+/* Forecast cards use Bootstrap card styling */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.forecast-card {
+  flex: 1 1 100px;
+  max-width: 120px;
+}
+
+/* Animated backgrounds */
+body.clear {
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+  animation: sunny 10s infinite alternate;
+}
+
+@keyframes sunny {
+  0% {
+    background: #87ceeb;
+  }
+  100% {
+    background: #f5f5dc;
+  }
+}
+
+body.clouds {
+  background: linear-gradient(to bottom, #d3d3d3, #808080);
+}
+
+body.rain {
+  background: linear-gradient(to bottom, #4e5d6c, #2c3e50);
+  animation: rainEffect 4s infinite linear;
+}
+
+@keyframes rainEffect {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+body.snow {
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  animation: snowEffect 5s infinite alternate;
+}
+
+@keyframes snowEffect {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+body.thunderstorm {
+  background: radial-gradient(circle, #000000, #434343);
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    background-color: #000000;
+  }
+  50% {
+    background-color: #e6e600;
+  }
+}
+
+body.mist {
+  background: linear-gradient(to bottom, #cccccc, #999999);
+}
