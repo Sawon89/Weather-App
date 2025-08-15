@@ -1,6 +1,7 @@
 # Weather-App
 
 Application URL: https://sawon89.github.io/Weather-App/
+
 🌤️ Just launched my Weather App project!
 
 I'm excited to share a responsive weather application I built using HTML, CSS (Bootstrap), and JavaScript. This project integrates live data from the OpenWeatherMap API and demonstrates practical frontend skills.
